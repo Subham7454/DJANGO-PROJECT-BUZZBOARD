@@ -1,0 +1,15 @@
+<!-- prettier-ignore -->
+{% extends "layout.html" %}
+{% block tittle %}
+Edit Tweet
+{% endblock %}
+{% block content %}
+<h1 class="text-center mt-4">Edit Your Tweet</h1>
+<form method="post" enctype="multipart/form-data" class="form mt-4">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit" class="btn btn-primary mt-3">Update Tweet</button>
+</form>
+<a href="{% url 'tweet_list' %}" class="btn btn-success mt-3">
+  Back to Updates
+</a>
+{% endblock %}

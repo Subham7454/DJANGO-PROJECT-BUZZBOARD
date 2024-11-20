@@ -1,0 +1,52 @@
+<!-- prettier-ignore -->
+{% extends "layout.html" %} 
+{% load static %}
+ 
+{% block tittle %}
+ BuzzBoard 
+{%endblock %} 
+{% block content %}
+<h1 class="text-center mt-4 text-primary">UPDATES</h1>
+
+<a class="btn btn-primary mb-4" href="{% url 'tweet_create' %}">
+  Create new update message
+</a>
+<div class="container">
+  <div class="row">
+    {% for tweet in tweets %}
+    <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
+      <div class="card m-3" style="width: 100%">
+        <!-- Check if photo exists -->
+        {% if tweet.photo %}
+        <img
+          src="{{ tweet.photo.url }}"
+          class="card-img-top img-fluid"
+          style="object-fit: cover; height: 200px"
+          alt="Tweet Image"
+        />
+        {% else %}
+        <img
+          src="{% static 'default_image.jpg' %}"
+          class="card-img-top img-fluid"
+          style="object-fit: cover; height: 200px"
+          alt="Default Tweet Image"
+        />
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title">{{ tweet.user.username }}</h5>
+          <p class="card-text">{{ tweet.text }}</p>
+          {% if tweet.user == user %}
+          <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-primary">
+            Edit
+          </a>
+          <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger">
+            Delete
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
