@@ -3,6 +3,8 @@ from .models import Tweet
 from .forms import TweetForm,UserRegistrationForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login
+from .forms import SearchForm
+
 
 
 # Home Page
@@ -66,3 +68,13 @@ def register(request):
         form = UserRegistrationForm()
     
     return render(request, 'registration/register.html', {'form': form})
+
+
+
+def search_view(request):
+    form = SearchForm(request.GET)
+    results = None
+    if form.is_valid():
+        query = form.cleaned_data['query']
+        results = Tweet.objects.filter(text__icontains=query)  # Use 'text' instead of 'content'
+    return render(request, 'search_results.html', {'form': form, 'results': results})
