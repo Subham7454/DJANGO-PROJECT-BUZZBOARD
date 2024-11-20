@@ -97,13 +97,32 @@ Ensure that you have the following installed on your system:
 ## Screenshots
 
 ### Home Page:
-![Home Page](./static/images/homepage.png)
+![home](https://github.com/user-attachments/assets/899d6b9c-d922-41fa-8127-0f177a89e530)
+
+
+### User Home:![user home](https://github.com/user-attachments/assets/602814bd-2169-47da-834f-e36d5134473d)
+
+
 
 ### Update Post:
-![Update Post](./static/images/update_post.png)
+![update](https://github.com/user-attachments/assets/e6f46179-9054-4c5e-be24-0279e495d5a4)
+
+
+### Delete Post:![delete](https://github.com/user-attachments/assets/a4e3c348-34cf-4be7-a860-402889c6b7f3)
+
+
 
 ### Search Results:
-![Search Results](./static/images/search_results.png)
+![Screenshot (124)](https://github.com/user-attachments/assets/2cd4bf92-e213-48db-8364-e268f49ed806)![Screenshot (123)](https://github.com/user-attachments/assets/883d3608-0e04-48e9-8a20-aa60e23722dd)
+
+
+### Log in Page:![login](https://github.com/user-attachments/assets/a6d26ddd-7e65-4f3b-a796-311ec29b288e)
+
+
+### Registration Pgae:![registration](https://github.com/user-attachments/assets/c33c857a-bdee-4ca3-abe8-03527fdfe010)
+
+
+### Search Results:
 
 ## Contributing
 
@@ -114,5 +133,3 @@ Feel free to fork this repository and submit pull requests if you wish to contri
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-Feel free to update the README with actual images, repository links, or other specific details. Let me know if you'd like further adjustments!
